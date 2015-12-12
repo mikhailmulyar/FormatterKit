@@ -14,13 +14,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.subspec 'AddressFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}'
-    ss.resource_bundles = {'FormatterKit' => ['Localizations/**']}
-    ss.osx.frameworks = 'AddressBook'
-    ss.ios.frameworks = 'AddressBook', 'AddressBookUI'
-  end
-
   s.subspec 'ArrayFormatter' do |ss|
     ss.source_files = 'FormatterKit/TTTArrayFormatter.{h,m}'
     ss.resources = 'Localizations/**'
@@ -35,12 +28,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'FormatterKit/TTTLocationFormatter.{h,m}'
     ss.resources = 'Localizations/**'
     ss.frameworks = 'CoreLocation'
-  end
-
-  s.subspec 'NameFormatter' do |ss|
-    ss.source_files = 'FormatterKit/TTTNameFormatter.{h,m}'
-    ss.resources = 'Localizations/**'
-    ss.ios.frameworks = 'AddressBook'
   end
 
   s.subspec 'OrdinalNumberFormatter' do |ss|
